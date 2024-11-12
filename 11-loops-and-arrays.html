@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loops and Arrays</title>
+</head>
+<body>
+  <script>
+    // const myArray = [10, 20, 30];
+    // console.log(myArray);
+
+    // const anotherArr = [1, 'Hello', true, {name: 'socks'}, [1,2]];
+    // console.log(typeof [1,2]); //object
+    // console.log(Array.isArray(anotherArr)); //true
+    // console.log(anotherArr.length); //5
+    // myArray.push(100); //adds value to the end of an array.
+    // console.log(myArray);
+
+    // myArray.splice(0,2); //removes a number of values starting an ndex splice(index, number of value to remove).
+    // console.log(myArray);
+
+    // let i =1;
+    // while (i <= 5){
+    //   console.log(i);
+    //   i++;
+    // }
+
+    //   let randomVal = 0;
+    //   while(randomVal < 0.5)
+    //   {
+    //     randomVal = Math.random();
+    //   }
+    //   console.log(randomVal);
+
+    // const arr = [1,2,3];
+    // let total = 0;
+    // for(let i =0; i< arr.length; i++){
+    //   arr[i] *=2;
+    // }
+    // console.log(arr);
+     
+    function removeEgg(arr){
+      const arr2 =[];
+      let eggCount = 0;
+      let originalArr = arr.slice();
+       originalArr.reverse();
+      for(let i=0; i<originalArr.length; i++)
+      {
+        if(originalArr[i] === 'egg' && eggCount <2){
+          eggCount++;
+          continue;
+        }
+        arr2.push(originalArr[i]);
+      }
+      return arr2.reverse();
+    }
+
+    console.log(removeEgg(['egg','apple','egg','egg','ham']));
+  </script>
+</body>
+</html>
